@@ -17,6 +17,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://sanjaymalviya.vercel.app"),
 
+  alternates: {
+    canonical: "/",
+  },
+
   title: {
     default: `${portfolio.name} | ${portfolio.role}`,
     template: `%s | ${portfolio.name}`,
@@ -57,8 +61,8 @@ export const metadata: Metadata = {
     follow: true,
   },
   verification: {
-  google: "google377a2f098407de29.html",
-},
+    google: "google377a2f098407de29.html",
+  },
 };
 
 
