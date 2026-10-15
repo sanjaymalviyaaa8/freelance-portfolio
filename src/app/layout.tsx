@@ -13,21 +13,51 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+
 export const metadata: Metadata = {
-  title: `${portfolio.name} | ${portfolio.role}`,
-  description: portfolio.tagline,
+  metadataBase: new URL("https://sanjaymalviya.vercel.app"),
+
+  title: {
+    default: `${portfolio.name} | ${portfolio.role}`,
+    template: `%s | ${portfolio.name}`,
+  },
+
+  description: `${portfolio.name} — ${portfolio.tagline} Explore my skills, projects, and frontend development services.`,
+
+  applicationName: `${portfolio.name} Portfolio`,
+  authors: [{ name: portfolio.name }],
+  creator: portfolio.name,
+
   keywords: [
-    "Frontend Developer",
+    portfolio.role,
     "React Developer",
     "Next.js Developer",
+    "TypeScript Developer",
     "Freelance Web Developer",
+    "Responsive Web Development",
   ],
+
   openGraph: {
     title: `${portfolio.name} | ${portfolio.role}`,
     description: portfolio.tagline,
+    url: "https://sanjaymalviya.vercel.app",
+    siteName: `${portfolio.name} Portfolio`,
+    locale: "en_IN",
     type: "website",
   },
+
+  twitter: {
+    card: "summary_large_image",
+    title: `${portfolio.name} | ${portfolio.role}`,
+    description: portfolio.tagline,
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
+
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
