@@ -56,6 +56,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  verification: {
+  google: "google377a2f098407de29.html",
+},
 };
 
 
